@@ -38,57 +38,47 @@ GOOGLE_SHEET_ID=your_google_sheet_id_here
 
 📋 Setup Instructions
 1️⃣ Google Sheets API Setup
-Go to Google Cloud Console.
-
-Create a Service Account.
-Enable the Google Sheets API.
-Download your JSON key file.
+    Go to Google Cloud Console.
+    Create a Service Account.
+    Enable the Google Sheets API.
+    Download your JSON key file.
 
 Extract:
-
 client_email → GOOGLE_SERVICE_ACCOUNT_EMAIL
 private_key → GOOGLE_PRIVATE_KEY
-
 Share your Google Sheet with the service account email (Editor permission).
 
 2️⃣ Backend Installation
-bash
-Copy
-Edit
-cd backend
-npm install express googleapis dotenv crypto cors
-node index.js
+    bash
+    Copy
+    Edit
+    cd backend
+    npm install express googleapis dotenv crypto cors
+    node index.js
 
 3️⃣ Frontend Installation
-bash
-Copy
-Edit
-cd frontend
-npm install react react-dom tesseract.js
-npm run dev
-📌 Flow
-Student Uploads Image
+    bash
+    Copy
+    Edit
+    cd frontend
+    npm install react react-dom tesseract.js
+    npm run dev
 
-Tesseract.js extracts text in-browser
+📌 Flow
+   Student Uploads Image
+   Tesseract.js extracts text in-browser
 
 The app:
-
-Parses answers
-
-Calculates MBTI type & %
-
-Generates image hash
-
-Backend checks Google Sheets for duplicates
-
-If unique → Store in Google Sheets
+  Parses answers
+  Calculates MBTI type & %
+  Generates image hash
+  Backend checks Google Sheets for duplicates
+  If unique → Store in Google Sheets
 
 📷 Duplicate Image Detection
-Uses crypto to hash the uploaded image
-
-Compares with stored hashes in Google Sheets
-
-Denies submission if duplicate found
+   Uses crypto to hash the uploaded image
+   Compares with stored hashes in Google Sheets
+   Denies submission if duplicate found
 
 🧪 Example Google Sheets Layout
 Name    MBTI    Score (%)    Image Hash    Date
