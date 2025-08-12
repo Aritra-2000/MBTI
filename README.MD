@@ -27,36 +27,6 @@ A web app where students complete an MBTI test on paper, take a picture via the 
 
 ---
 
-## 📂 Folder Structure
-mbti-ocr-app/
-├── backend/
-│ ├── index.js # Express server for Google Sheets API
-│ ├── googleSheets.js # Google Sheets API integration logic
-│ ├── utils/
-│ │ └── hashImage.js # Generates hash to detect duplicates
-│ ├── package.json
-│ └── .env # Backend secrets
-│
-├── frontend/
-│ ├── src/
-│ │ ├── App.jsx # Main React component
-│ │ ├── components/
-│ │ │ ├── ImageUpload.jsx
-│ │ │ └── OCRResult.jsx
-│ │ ├── utils/
-│ │ │ └── ocrProcessor.js # Tesseract.js logic
-│ ├── package.json
-│ └── .env # Frontend env (if needed)
-│
-├── README.md
-└── package.json # Root config (optional)
-
-yaml
-Copy
-Edit
-
----
-
 ## 🔑 Environment Variables
 
 ### .env (Backend)
